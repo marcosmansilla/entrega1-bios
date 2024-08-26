@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes con ajustes salariales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>ESTUDIO CONTABLE</h1>
+    </header>
+
+    <main class="contenedor">
+        <h2>Empresas que deben ajustar salarios</h2>
+        <p>A continuación se deben ingresar las empresas que corresponden otorgar ajustes salariales:</p>
+        <form id="form" onsubmit="guardarDatos(event)">
+            <div class="ingreso-datos-form">
+                <li>
+                    <label for="name">Nombre de la empresa</label>
+                    <input type="text" id="name" name="nombre" required placeholder="Nombre de la empresa">
+                </li>
+
+                <li>
+                    <label for="grupo">Grupo de Consejo de salario</label>
+                    <input type="number" id="grupo" name="grupo" required placeholder="Grupo">
+                </li>
+
+                <li>
+                    <label for="fecha">Fecha del Ajuste</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </li>
+
+                <li>
+                    <label for="porcentaje">Porcentaje del ajuste</label>
+                    <input type="number" id="porcentaje" name="porcentaje" required placeholder="Porcentaje">
+                </li>
+
+                <li>
+                    <label for="obs">Observaciones</label>
+                    <textarea name="obs" id="obs"></textarea>
+                </li>
+            </div>
+            <button id="boton-enviar" type="submit">
+                Enviar
+            </button>
+        </form>
+
+        <div id="lista-empresas"></div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
